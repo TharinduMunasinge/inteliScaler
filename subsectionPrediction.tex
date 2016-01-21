@@ -22,5 +22,10 @@ f(x) = 0.1    0.05 < x <=1 \\
 f(x) = 0.2    1 < x <= 5 \\
 f(x) = 2^(x/20)    5 < x <= 100 
 
+From the results shown (in Fig 3 and Fig 4), we conclude that implementing smart killing on auto scaling solutions improves resource utilization while reducing the cost significantly in most cases, regardless of the auto scaling approach (reactive or proactive). We also conclude the proposed proactive scaling approach outperforms the reactive threshold approach, considering QoS as well as resource cost.
+
+\subsubsection{Suggested Improvements}
+
+It is possible to improve the proposed heuristic by introducing different penalty functions  based on the level of service expected by different users. For example, an application (deployed on a PaaS) that supports free as well as paid versions would require different service levels. Our proposed solution can be adapted for such scenarios by defining different penalty functions based on the type of subscription.
 
 \subsection{Execution Engine}
