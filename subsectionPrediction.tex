@@ -6,7 +6,7 @@ Most of the public PaaS solutions like Google App Engine provide SLAs based on t
 We propose a greedy heuristic scaling algorithm inspired by already existing PaaS SLAs. However, unlike most PaaS providers, we do not consider service uptime as the measure of QoS. Instead we consider any performance degradation with respect to the matrix considered (Memory Consumption, CPU, Requests in Flight) as a violation.
 
 \subsubsection{Scaling Algorithm}
-Considering both resource cost and the penalty for performance degradation, we define the total cost in the next T minutes as follows.
+Considering both resource cost and the penalty for performance degradation, we define the total cost in the next T minutes as follows.\\
 \textbf{Algo Here}\\
 Using the above definition, we calculate the total cost for different numbers of instances, n. Increasing the number of instances increases resource cost but decreases penalty factor (and therefore the violation cost). Considering values from the minimum number of VMs to the maximum number of VMs allowed, we decide an optimum number that minimizes the total cost. Such an exhaustive search is made possible by the bounded and relatively small range of VM count in most set-ups.
 \subsubsection {Pricing Model Awareness}
