@@ -12,4 +12,9 @@ Using the above definition, we calculate the total cost for different numbers of
 \subsubsection {Pricing Model Awareness}
 Our proposed solution also considers the pricing model of the underlying IaaS layer when taking auto scaling decisions. We adapted the smart killing feature proposed in [\cite{pluggable}] after evaluating the concept. Cloud providers like AWS bill customers on a per-hour basis, which means a user will be charged for one hour even if an instance is used only for a few minutes. Smart killing suggests that an instance should not be spinned down if it has not completed a full billing cycle. Considering practical issues such as the time required to gracefully shut down an instance, we spin down an instance only if it used for 50 to 57 minutes in its billing hour. However, smart killing is only useful for IaaS models with relatively long billing cycles.
 
+
+\subsubsection{Final Scaling Solution: Flow Chart}
+
+
+
 \subsection{Execution Engine}
