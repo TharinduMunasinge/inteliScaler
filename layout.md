@@ -4,7 +4,6 @@ sectionIntroduction_.tex
 sectionRelated_Work_.tex
 sectionDesign_We_pro.tex
 figures/systemDesign/systemDesign.png
-figures/32zoom/32zoom.png
 subsectionPrediction.tex
 figures/Scaling- Flow Chart3/Scaling- Flow Chart3.png
 .tex
