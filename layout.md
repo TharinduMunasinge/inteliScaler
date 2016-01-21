@@ -6,6 +6,7 @@ sectionDesign_We_pro.tex
 figures/systemDesign/systemDesign.png
 subsectionPrediction.tex
 figures/Scaling- Flow Chart3/Scaling- Flow Chart3.png
+figures/32zoom1/32zoom1.png
 .tex
 sectionSimulation_Se.tex
 sectionExperimental_.tex
