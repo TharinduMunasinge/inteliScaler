@@ -7,7 +7,6 @@ figures/systemDesign/systemDesign.png
 subsectionPrediction.tex
 figures/Scaling- Flow Chart3/Scaling- Flow Chart3.png
 figures/32zoom1/32zoom1.png
-figures/z-cost-zoom/z-cost-zoom.png
 figures/z-cost/z-cost.png
 figures/z-cost-xtick/z-cost-xtick.png
 figures/demo-4lines/demo-4lines.png
