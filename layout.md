@@ -8,6 +8,7 @@ subsectionPrediction.tex
 figures/Scaling- Flow Chart3/Scaling- Flow Chart3.png
 figures/32zoom1/32zoom1.png
 figures/z-cost-xtick/z-cost-xtick.png
+figures/z-cost2/z-cost2.png
 figures/demo-4lines/demo-4lines.png
 .tex
 sectionSimulation_Se.tex
