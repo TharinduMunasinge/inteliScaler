@@ -14,6 +14,14 @@ Considering both resource cost and the penalty for performance degradation, we d
     \end{tabular} 
 \end{table}
 \\
+\textbf{$ C_t = C_{ins} \times n  +  C_{ins} \times n \times f(v_i \times \frac{100}{T}) $} \\
+\\
+$ T $       = Total time for prediction \\
+$ C_t $     = Total cost for time T  \\
+$ C_{ins} $ = Cost for an instance   \\
+$ n $       = Number of instances  \\
+$ v_i $     = Violation time  \\
+\\
 
 Using the above definition, we calculate the total cost for different numbers of instances, n. Increasing the number of instances increases resource cost but decreases penalty factor (and therefore the violation cost). Considering values from the minimum number of VMs to the maximum number of VMs allowed, we decide an optimum number that minimizes the total cost. Such an exhaustive search is made possible by the bounded and relatively small range of VM count in most set-ups.
 \subsubsection {Pricing Model Awareness}
