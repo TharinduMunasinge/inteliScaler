@@ -8,7 +8,7 @@ We propose a greedy heuristic scaling algorithm inspired by already existing Paa
 \subsubsection{Scaling Algorithm}
 Considering both resource cost and the penalty for performance degradation, we define the total cost in the next T minutes as follows.\\
 \\
-\textbf{$$ C_t(n) = C_{ins} \times n  +  C_{ins} \times n \times f(v_i \times \frac{100}{T}) $$} \\
+\textbf{$$ C_t(n) = C_{ins} \times n  +  C_{ins} \times n \times f(v_i \times \frac{100}{T}) $$}
 $$n_{opt} = argmin_{n \in N \ \land \ n \in [min, max]}C_t(n) $$ \\
 \\
 $T       = Total\ time\ for\ prediction $ \\
@@ -17,9 +17,7 @@ $C_{ins} = Cost\ for\ an\ instance$   \\
 $n       = Number\ of\ instances $  \\
 $v_i     = Violation\ time $ \\
 
-Here f is a predefined function which calculate penalizing factor based on the percentage of performance degradation. 
-\\
-
+Here f is a predefined function which calculate penalizing factor based on the percentage of performance degradation. \\
 Using the above definition, we calculate the total cost for different numbers of instances, n. Increasing the number of instances increases resource cost but decreases penalty factor (and therefore the violation cost). Considering values from the minimum number of VMs to the maximum number of VMs allowed, we decide an optimum number that minimizes the total cost. Such an exhaustive search is made possible by the bounded and relatively small range of VM count in most set-ups.
 \subsubsection {Pricing Model Awareness}
 
@@ -29,6 +27,9 @@ Our proposed solution also considers the pricing model of the underlying IaaS la
 First two graphs in the Figure 3 shows the variation of instance count with and without smart killing when the prediction mechanism of Stratos is used, along with an 80\% threshold value to calculate the required number of instances.
 
 Last four graphs at bottom in figure 3 shows possible combinations of reactive and proactive auto scaling approaches with and without smart killing. An 80\% threshold level is used in reactive solutions as well. In the proactive approach, the proposed heuristic is used with following penalty function:
+f(x)= 
+    \frac{x^2-x}{x},& \text{if } x\geq 1\\
+    0,              & \text{otherwise}
 
 f(x) = 0.1    0.05 < x <=1 \\
 f(x) = 0.2    1 < x <= 5 \\
