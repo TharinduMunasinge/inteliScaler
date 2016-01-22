@@ -9,13 +9,13 @@ We propose a greedy heuristic scaling algorithm inspired by already existing Paa
 Considering both resource cost and the penalty for performance degradation, we define the total cost in the next T minutes as follows.\\
 \\
 \textbf{$$ C_t(n) = C_{ins} \times n  +  C_{ins} \times n \times f(v_i \times \frac{100}{T}) $$} \\
-$n_{opt} = argmin_{n \in N \ \land \ n \in [min, max]}C_t(n) $ \\
+$$n_{opt} = argmin_{n \in N \ \land \ n \in [min, max]}C_t(n) $$ \\
 \\
 $T       = Total\ time\ for\ prediction $ \\
 $C_t(n)  = Total\ cost\ for\ time\ T $ \\
-$C_{ins}$ &=& Cost\ for\ an\ instance   \\
-$n$       = Number\ of\ instances  \\
-$v_i$     = Violation\ time  \\
+$C_{ins} = Cost\ for\ an\ instance$   \\
+$n       = Number\ of\ instances $  \\
+$v_i     = Violation\ time $ \\
 
 Here f is a predefined function which calculate penalizing factor based on the percentage of performance degradation. 
 \\
