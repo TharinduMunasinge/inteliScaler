@@ -22,7 +22,7 @@ $C_{ins}$ = Cost for an instance   \\
 $n$       = Number of instances  \\
 $v_i$     = Violation time  \\
 
-Here f is a predefined function which calculate penalizing factor based on the percentage of performance degradation. $n_{opt} = \{n: argmin(C_t) \ where \ n \in N \land n \in [min, max]  \} $
+Here f is a predefined function which calculate penalizing factor based on the percentage of performance degradation. $n_{opt} = arg \min_{\in N \land n \in [min, max]}(C_t(n)) $
 \\
 
 Using the above definition, we calculate the total cost for different numbers of instances, n. Increasing the number of instances increases resource cost but decreases penalty factor (and therefore the violation cost). Considering values from the minimum number of VMs to the maximum number of VMs allowed, we decide an optimum number that minimizes the total cost. Such an exhaustive search is made possible by the bounded and relatively small range of VM count in most set-ups.
