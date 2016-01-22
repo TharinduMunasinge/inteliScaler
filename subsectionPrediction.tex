@@ -27,15 +27,12 @@ Our proposed solution also considers the pricing model of the underlying IaaS la
 First two graphs in the Figure 3 shows the variation of instance count with and without smart killing when the prediction mechanism of Stratos is used, along with an 80\% threshold value to calculate the required number of instances.
 
 Last four graphs at bottom in figure 3 shows possible combinations of reactive and proactive auto scaling approaches with and without smart killing. An 80\% threshold level is used in reactive solutions as well. In the proactive approach, the proposed heuristic is used with following penalty function:
+
 $$f(x) = \begin{cases} 
 0 & \text{if $0 < x \le 0.05$}; \\
 0.1 & \text{if $0.05 < x \le 1$}; \\
 0.2 & \text{if $1 < x \le 5$};\\
-2^(x/20) & \text{if $5 < x < 100$}.\end{cases} $$
-
-f(x) = 0.1    0.05 < x <=1 \\
-f(x) = 0.2    1 < x <= 5 \\
-f(x) = 2\^{($\frac{x}{20}$)}    5 < x <= 100 
+2^{\frac{x}{20}} & \text{if $5 < x \le 100$}.\end{cases} $$
 
 From the results shown (in Fig 3 and Fig 4), we conclude that implementing smart killing on auto scaling solutions improves resource utilization while reducing the cost significantly in most cases, regardless of the auto scaling approach (reactive or proactive). We also conclude the proposed proactive scaling approach outperforms the reactive threshold approach, considering QoS as well as resource cost.
 
