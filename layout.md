@@ -8,7 +8,6 @@ subsectionPrediction.tex
 figures/Scaling- Flow Chart3/Scaling- Flow Chart3.png
 figures/z-stratos/z-stratos.png
 figures/z-reactive/z-reactive.png
-figures/z-reactive1/z-reactive1.png
 figures/z-proactive/z-proactive.png
 figures/32zoom1/32zoom1.png
 figures/z-cost3/z-cost3.png
