@@ -27,7 +27,7 @@ Our proposed solution also considers the pricing model of the underlying IaaS la
 \subsubsection{Simulation Results}
 First two graphs in the Figure 3 shows the variation of instance count with and without smart killing when the prediction mechanism of Stratos is used, along with an 80\% threshold value to calculate the required number of instances.
 
-Last four graphs at bottom in figure 3 shows possible combinations of reactive and proactive auto scaling approaches with and without smart killing. An 80\% threshold level is used in reactive solutions as well. In the proactive approach, the proposed heuristic is used with following penalty function:
+Last four graphs at bottom in Figure 3 shows possible combinations of reactive and proactive auto scaling approaches with and without smart killing. An 80\% threshold level is used in reactive solutions as well. In the proactive approach, the proposed heuristic is used with following penalty function:
 
 $$f(x) = \begin{cases} 
 0 & \text{if $0 < x \le 0.05$}; \\
@@ -35,7 +35,7 @@ $$f(x) = \begin{cases}
 0.2 & \text{if $1 < x \le 5$};\\
 2^{\frac{x}{20}} & \text{if $5 < x \le 100$};.\end{cases} $$
 
-From the results shown (in Fig 3 and Fig 4), we conclude that implementing smart killing on auto scaling solutions improves resource utilization while reducing the cost significantly in most cases, regardless of the auto scaling approach (reactive or proactive). We also conclude the proposed proactive scaling approach outperforms the reactive threshold approach, considering QoS as well as resource cost.
+From the results shown (in Figure 3 and Figure 4), we conclude that implementing smart killing on auto scaling solutions improves resource utilization while reducing the cost significantly in most cases, regardless of the auto scaling approach (reactive or proactive). We also conclude the proposed proactive scaling approach outperforms the reactive threshold approach, considering QoS as well as resource cost.
 
 \subsubsection{Suggested Improvements}
 It is possible to improve the proposed heuristic by introducing different penalty functions  based on the level of service expected by different users. For example, an application (deployed on a PaaS) that supports free as well as paid versions would require different service levels. Our proposed solution can be adapted for such scenarios by defining different penalty functions based on the type of subscription.
