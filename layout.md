@@ -5,6 +5,7 @@ sectionRelated_Work_.tex
 sectionDesign_We_pro.tex
 figures/systemDesign/systemDesign.png
 section_Prediction_Model__.tex
+section_Cost_Aware_Resource_Allocation__.tex
 subsectionPrediction.tex
 figures/Scaling- Flow Chart3/Scaling- Flow Chart3.png
 figures/z-stratos/z-stratos.png
