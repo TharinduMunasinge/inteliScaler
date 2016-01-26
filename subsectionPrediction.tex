@@ -1,27 +1,3 @@
-\section{Cost Aware Resource Allocation}\\
-Most of the public PaaS solutions like Google App Engine provide SLAs based on the QoS provided. According to these SLAs, a penalty will be charged from the provider to the PaaS user in a case where the provider was unable to provide the agreed level of service. In most cases this penalty is defined as a percentage of the monthly cost of users.
-
-We propose a greedy heuristic scaling algorithm inspired by already existing PaaS SLAs. However, unlike most PaaS providers, we do not consider service uptime as the measure of QoS. Instead we consider any performance degradation with respect to the matrix considered (Memory Consumption, CPU, Requests in Flight) as a violation.
-
-\subsection{Scaling Algorithm}
-Considering both resource cost and the penalty for performance degradation, we define the total cost in the next T minutes as follows.\\
-\\
-\textbf{$$ C_t(n) = C_{ins} \times n  +  C_{ins} \times n \times f(v_i \times \frac{100}{T}) $$}
-\textbf{$$n_{opt} = argmin_{n \in N \ \land \ n \in [min, max]}C_t(n)$$} \\
-\\
-$T       = Total\ time\ for\ prediction $ \\
-$C_t(n)  = Total\ cost\ for\ time\ T $ \\
-$C_{ins} = Cost\ for\ an\ instance$   \\
-$n       = Number\ of\ instances $  \\
-$v_i     = Violation\ time $ \\
-\\
-Here f is a predefined function which calculate penalizing factor based on the percentage of performance degradation.\\
-\\
-Using the above definition, we calculate the total cost for different numbers of instances, n. Increasing the number of instances increases resource cost but decreases penalty factor (and therefore the violation cost). Considering values from the minimum number of VMs to the maximum number of VMs allowed, we decide an optimum number that minimizes the total cost. Such an exhaustive search is made possible by the bounded and relatively small range of VM count in most set-ups.
-\subsection {Pricing Model Awareness}
-
-Our proposed solution also considers the pricing model of the underlying IaaS layer when taking auto scaling decisions. We adapted the smart killing feature proposed in [\cite{pluggable}] after evaluating the concept. Cloud providers like AWS bill customers on a per-hour basis, which means a user will be charged for one hour even if an instance is used only for a few minutes. Smart killing suggests that an instance should not be spin downed if it has not completed a full billing cycle. Considering practical issues such as the time required to gracefully shut down an instance, we spin down an instance only if it used for 50 to 57 minutes in its billing hour. However, smart killing is only useful for IaaS models with relatively long billing cycles.
-
 \section{Simulation Results}
 First two graphs in the Figure 3 shows the variation of instance count with and without smart killing when the prediction mechanism of Stratos is used, along with an 80\% threshold value to calculate the required number of instances.
 
