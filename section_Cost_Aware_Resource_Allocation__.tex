@@ -6,7 +6,7 @@ We propose a greedy heuristic scaling algorithm inspired by already existing Paa
 \subsection{Scaling Algorithm}
 Considering both resource cost and the penalty for performance degradation, we define the total cost in the next T minutes as follows.\\
 \\
-\textbf{$$ C_t(n) = C_{ins} \times n  +  C_{ins} \times n \times f(v_i \times \frac{100}{T}) $$}
+\textbf{$$ C_t(n) = C_{ins}.n  +  C_{ins} . n . f(v_i. \frac{100}{T}) $$}
 \textbf{$$n_{opt} = argmin_{n \in N \ \land \ n \in [min, max]}C_t(n)$$} \\
 \\
 $T\ \ \ \ \ \ \ = Total\ time\ for\ prediction $ \\
