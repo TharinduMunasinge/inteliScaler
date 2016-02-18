@@ -7,6 +7,7 @@ figures/systemDesign/systemDesign.png
 section_Prediction_Model_subsection_Requirements__.tex
 subsection_Requirements_While_proactive_auto__.tex
 subsection_Problems_of_Existing_Approaches__.tex
+subsection_Our_Approach_For_adaptive__.tex
 section_Cost_Aware_Resource_Allocation__.tex
 figures/z-demo/z-demo.png
 subsection_Pricing_Model_Awareness_Our__.tex
