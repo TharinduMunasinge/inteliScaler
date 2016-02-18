@@ -1,0 +1,12 @@
+\subsection{Requirements}
+While proactive auto scaling has can be beneficial for a PaaS with diverse applications and drastically differing resource demands, such auto scalers should be capable of accurately predicting future workloads over a reasonable time horizon in order for their proactive decisions to be effective.
+Making early scaling decisions, such that the required resources would be allocated in advance to cater for future workloads, is highly dependent on the availability of such accurate predictions.
+
+The following can be identified as some major characteristics of a good cloud workload prediction model:
+
+\begin{itemize}
+\item Ability to predict accurately over a sufficiently large time horizon, considering factors like VM start-up and shutdown delays
+\item Online training capability, as evolution and continuous learning of new workload characteristics is essential as the workload dataset grows with time
+\item Bounded processing time per auto scaling request
+\item Immunity to overfitting to specific patterns, since it should be able to deal with different applications and hence a wide variety of dynamic workload patterns
+\end{itemize}
