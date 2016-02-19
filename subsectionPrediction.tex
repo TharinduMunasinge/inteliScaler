@@ -11,4 +11,7 @@ $$f(x) = \begin{cases}
 0.2 & \text{if $1 < x \le 5$};\\
 2^{\frac{x}{20}} & \text{if $5 < x \le 100$};.\end{cases} $$
 
-From the results shown (in Figure 3 and Figure 4), we conclude that implementing smart killing on auto scaling solutions improves resource utilization while reducing the cost significantly in most cases, regardless of the auto scaling approach (reactive or proactive). We also conclude the proposed proactive scaling approach outperforms the reactive threshold approach, considering QoS as well as resource cost.
+
+Figure-6 shows the variation of cost over time for for different auto scaling approaches.It can be noted that blind killing combined with Apache Stratos incur highest cost while proactive solution combined with smart killing.\\
+
+From the results in resource utilization graphs and cost graphs we observe, introducing smart killing feature for autoscaling  improves resource utilization while reducing the cost.significantly , regardless of the auto scaling approach (reactive or proactive). We also conclude the proposed proactive scaling approach outperforms the reactive threshold approach, considering QoS as well as resource cost.
