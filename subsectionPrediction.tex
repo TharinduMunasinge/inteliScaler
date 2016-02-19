@@ -1,7 +1,9 @@
 \section{Simulation Results}
-First two graphs in the Figure 3 shows the variation of instance count with and without smart killing when the prediction mechanism of Stratos is used, along with an 80\% threshold value to calculate the required number of instances.
+We evaluated proposed approach using different workloads. Figure 4,5 and 6 shows resource allocation of proposed algorithm based on Load Average Statistics from RUBIS on AWS deployment.
 
-Last four graphs at bottom in Figure 3 shows possible combinations of reactive and proactive auto scaling approaches with and without smart killing. An 80\% threshold level is used in reactive solutions as well. In the proactive approach, the proposed heuristic is used with following penalty function:
+Two graphs in the Figure 3 shows the variation of instance count with and without smart killing when the prediction mechanism of Stratos is used, along with an 80\% threshold value to calculate the required number of instances.
+
+Graphs in Figure-4  and Figure-5 shows possible combinations of reactive and proactive auto scaling approaches with and without smart killing. An 80\% threshold level is used in reactive solutions as well. In the proactive approach, the proposed heuristic is used with following penalty function:
 
 $$f(x) = \begin{cases} 
 0 & \text{if $0 < x \le 0.05$}; \\
