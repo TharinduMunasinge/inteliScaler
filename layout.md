@@ -17,7 +17,6 @@ figures/z-stratos1/z-stratos1.png
 figures/z-reactive2/z-reactive2.png
 figures/z-proactive1/z-proactive1.png
 Two_graphs_in_the_Figure__.tex
-figures/Scaling- Flow Chart3/Scaling- Flow Chart3.png
 figures/z-cost3/z-cost3.png
 .tex
 sectionSimulation_Se.tex
