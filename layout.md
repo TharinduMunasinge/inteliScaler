@@ -4,6 +4,7 @@ sectionIntroduction_.tex
 sectionRelated_Work_.tex
 sectionDesign_We_pro.tex
 figures/systemDesign/systemDesign.png
+figures/Copy of Scaling- Flow Chart/Copy of Scaling- Flow Chart.png
 section_Prediction_Model_subsection_Requirements__.tex
 subsection_Requirements_While_proactive_auto__.tex
 subsection_Problems_of_Existing_Approaches__.tex
