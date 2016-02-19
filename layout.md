@@ -18,7 +18,6 @@ figures/z-stratos/z-stratos.png
 figures/z-reactive/z-reactive.png
 figures/z-proactive/z-proactive.png
 figures/z-cost3/z-cost3.png
-figures/demo-4lines/demo-4lines.png
 .tex
 sectionSimulation_Se.tex
 sectionExperimental_.tex
