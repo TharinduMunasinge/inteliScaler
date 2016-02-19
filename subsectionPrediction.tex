@@ -1,17 +1,2 @@
 \section{Simulation Results}
 We evaluated proposed approach using different workloads. Figure 4,5 and 6 shows resource allocation of proposed algorithm based on Load Average Statistics from RUBIS on AWS deployment.
-
-Two graphs in the Figure 3 shows the variation of instance count with and without smart killing when the prediction mechanism of Stratos is used, along with an 80\% threshold value to calculate the required number of instances.
-
-Graphs in Figure-4  and Figure-5 shows possible combinations of reactive and proactive auto scaling approaches with and without smart killing. An 80\% threshold level is used in reactive solutions as well. In the proactive approach, the proposed heuristic is used with following penalty function:
-
-$$f(x) = \begin{cases} 
-0 & \text{if $0 < x \le 0.05$}; \\
-0.1 & \text{if $0.05 < x \le 1$}; \\
-0.2 & \text{if $1 < x \le 5$};\\
-2^{\frac{x}{20}} & \text{if $5 < x \le 100$};.\end{cases} $$
-
-
-Figure-6 shows the variation of cost over time for for different auto scaling approaches.It can be noted that blind killing combined with Apache Stratos incur highest cost while proactive solution combined with smart killing.\\
-
-From the results in resource utilization graphs and cost graphs we observe, introducing smart killing feature for autoscaling  improves resource utilization while reducing the cost.significantly , regardless of the auto scaling approach (reactive or proactive). We also conclude the proposed proactive scaling approach outperforms the reactive threshold approach, considering QoS as well as resource cost.
