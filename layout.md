@@ -3,6 +3,7 @@ maketitle__vspace1in.tex
 sectionIntroduction_.tex
 sectionRelated_Work_.tex
 sectionDesign_We_pro.tex
+figures/inteliScaler Arch/inteliScaler Arch.png
 figures/systemDesign/systemDesign.png
 subsubsection_Workload_Predictor_This_component__.tex
 figures/Copy of Scaling- Flow Chart/Copy of Scaling- Flow Chart.png
