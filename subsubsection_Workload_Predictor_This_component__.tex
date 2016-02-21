@@ -1,5 +1,5 @@
 \subsubsection{Workload Predictor}
-This component predicts the future workload by processing statistic from the Real Time Event Processor. Prediction results then are sent to the Resource Monitor.
+This component predicts the future workload by processing statistic from the Real Time Event Processor. Prediction results are then sent to the Resource Monitor.
 
 \subsubsection{Resource Monitor}
 Resource Monitor is responsible for resource allocation and deallocation. Resouce Monitor consists of two subcomponents, Resource Quantifier and Cost Optimizer. \textit{Resource Quantifier} decides the number of instances required to handle predicted or anticipated workload. \textit{Cost Optimizer} handles qualitative aspect by deciding which instances to spin-down or which type of instance to spin-up while taking the pricing models of underlying IaaS into consideration. Finally, Resource Monitor inform number of instances required and which instances to spin-off (if system need to scale-down) to the Cloud Controller.
