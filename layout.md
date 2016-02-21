@@ -16,6 +16,7 @@ figures/zstratos/zstratos.png
 figures/z-reactive2/z-reactive2.png
 figures/zreactive/zreactive.png
 figures/z-proactive1/z-proactive1.png
+figures/zproactive/zproactive.png
 Two_graphs_in_the_ref__.tex
 figures/z-cost3/z-cost3.png
 .tex
