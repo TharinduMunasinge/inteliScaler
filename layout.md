@@ -7,7 +7,6 @@ figures/inteliScaler Arch/inteliScaler Arch.png
 subsubsection_Workload_Predictor_This_component__.tex
 figures/Copy of Scaling- Flow Chart/Copy of Scaling- Flow Chart.png
 section_Prediction_Model_subsection_Requirements__.tex
-subsection_Requirements_While_proactive_auto__.tex
 subsection_Problems_of_Existing_Approaches__.tex
 subsection_Our_Approach_For_adaptive__.tex
 subsection_Proposed_Prediction_Algorithm_begin__.tex
