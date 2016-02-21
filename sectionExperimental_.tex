@@ -5,11 +5,11 @@ Here we evaluate inteliScaler within Apache Stratos deployed on top of AWS EC2. 
 In order to evaluate the scaling process of Apache Stratos we cannot simply use either a simulation or the built-in mock IaaS feature, since they do not capture every aspect of a real system such as fault detection and handling, spawn time delay and in-flight requests count. Hence we deployed Apache Stratos 4.1.4 on AWS EC2 in a distributed setup to run a few workloads using the RUBiS benchmark and allow the system to scale using default policies. Configuration details of the setup are given in table \ref{tab:stratos_config}. 
 
 
-\begin{table}[T]
+\begin{table}[h!]
 \centering
 \caption{Apache Stratos setup configuration}
 \label{tab:stratos_config}
-    \begin{tabular}{ | p | p | p | p{2cm}|}
+    \begin{tabular}{ | p{2cm} | p{2cm} | p{2cm}| p{2cm}|}
     \hline
     Stratos Component & Implementation & EC2 Instance Type & Details \\ \hline
     Stratos & Apache Stratos 4.1.4 & t2.medium & This includes Stratos Manager and the Auto-Scaler \\ \hline
