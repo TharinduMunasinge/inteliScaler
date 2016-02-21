@@ -19,7 +19,7 @@ subsectionPrediction.tex
 figures/z-stratos1/z-stratos1.png
 figures/z-reactive2/z-reactive2.png
 figures/z-proactive1/z-proactive1.png
-Two_graphs_in_the_Figure__.tex
+Two_graphs_in_the_ref__.tex
 figures/z-cost3/z-cost3.png
 textit_Proactive_Smart_Killing_Total__.tex
 .tex
