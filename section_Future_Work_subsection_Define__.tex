@@ -1,0 +1,13 @@
+
+\section{Future Work}
+\subsection{Define Different Penalty Function Based on Expected QoS}
+It is possible to improve the proposed heuristic by introducing different penalty functions  based on the level of service expected by different users. For example, an application (deployed on a PaaS) that supports free as well as paid versions would require different service levels. Our proposed solution can be adapted for such scenarios by defining different penalty functions based on the type of subscription.\\
+
+\subsection{Bidding for Spot Instances on AWS}
+Our research work on cost modeling was focused on on-demand instances. However, IaaS providers such as AWS support other instance types with different payment schemes, such as spot and reserved instances. In spot instances, the IaaS user (PaaS provider in our case) can bid for idling instances. If the bid is higher than the market value, the instance will be assigned to the bidder. An efficient implementation for acquiring spot instances for handling dynamic workload requirements would significantly reduce overall cost.
+
+\subsection{Inclusion of a Performance Model}
+Current implementation of inteliScaler is focused on a limited set of instances, since we were not able to conduct research for all the instance types available at AWS due to the cost factor. For completion of the solution, a performance model is required for mapping the workload requirement with a suitable instance type configuration available at the IaaS layer. This depends heavily on the application being deployed, but in general we will be able to accurately define the limitations of each resource type for a generic workload. \\
+
+\subsection{Support for Heterogeneity}
+Our solution as well as the current auto-scaling implementation on Apache Stratos assumes homogeneity of the worker nodes (members or instances). Although this results in a simpler resource management model, it prevents Stratos from enjoying many benefits and profitable aspects of heterogeneous deployment, including spawning of instances with specialized resource capacities (e.g., a memory-optimized instance when the cluster is facing memory deficiencies rather than high load averages or requests-in-flight counts) and choosing combinations of different instance types to fulfill a given resource demand while minimizing total cost. However, implementing heterogeneity on the current Stratos architecture would include a substantial amount of changes to the existing code base.
