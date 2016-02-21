@@ -3,7 +3,6 @@ maketitle__vspace1in.tex
 sectionIntroduction_.tex
 sectionRelated_Work_.tex
 subsection_Evaluating_the_performance_of__.tex
-subsubsection_Workload_Predictor_This_component__.tex
 figures/Copy of Scaling- Flow Chart/Copy of Scaling- Flow Chart.png
 section_Prediction_Model_subsection_Requirements__.tex
 subsection_Problems_of_Existing_Approaches__.tex
@@ -22,6 +21,7 @@ figures/z-cost3/z-cost3.png
 sectionDesign_We_pro.tex
 figures/inteliScaler Arch/inteliScaler Arch.png
 sectionSimulation_Se.tex
+subsubsection_Workload_Predictor_This_component__.tex
 sectionExperimental_.tex
 subsection_Evaluation_We_have_implemented__.tex
 1.tex
