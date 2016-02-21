@@ -11,6 +11,7 @@ subsection_Requirements_While_proactive_auto__.tex
 subsection_Problems_of_Existing_Approaches__.tex
 subsection_Our_Approach_For_adaptive__.tex
 subsection_Proposed_Prediction_Algorithm_begin__.tex
+subsection_Evaluation_We_have_implemented__.tex
 section_Cost_Aware_Resource_Allocation__.tex
 figures/z-demo/z-demo.png
 subsection_Pricing_Model_Awareness_Our__.tex
