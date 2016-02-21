@@ -1,10 +1,12 @@
-abstractmaketitle__vspace1in.tex
+abstract.tex
+maketitle__vspace1in.tex
 sectionIntroduction_.tex
 sectionRelated_Work_.tex
 section_Prediction_Model_subsection_Requirements__.tex
 subsection_Limitations_of_Existing_Approaches__.tex
 subsection_Our_Approach_For_adaptive__.tex
 subsection_Proposed_Prediction_Algorithm_begin__.tex
+subsection_Evaluation_We_have_implemented__.tex
 section_Cost_Aware_Resource_Allocation__.tex
 figures/zdemo2/zdemo2.png
 subsection_Pricing_Model_Awareness_Our__.tex
@@ -16,13 +18,11 @@ Two_graphs_in_Figure_ref__.tex
 figures/z-cost3/z-cost3.png
 subsubsection_Evaluation_of_Scaling_Algorithm__.tex
 It_can_be_observed_from__.tex
-.tex
 sectionDesign_We_pro.tex
 figures/inteliScaler Arch/inteliScaler Arch.png
 figures/Copy of Scaling- Flow Chart/Copy of Scaling- Flow Chart.png
 subsubsection_Workload_Predictor_This_component__.tex
 sectionExperimental_.tex
-subsection_Evaluation_We_have_implemented__.tex
 subsection_Overall_Evaluation_We_ran__1.tex
 figures/results_workload_3_4/results_workload_3_4.png
 begin_table_h_centering_caption__.tex
