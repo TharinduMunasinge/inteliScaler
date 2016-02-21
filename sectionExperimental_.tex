@@ -1,8 +1,8 @@
-\section{Experimental Setup}
+\section{Experimental Results}
 Here we evaluate inteliScaler within Apache Stratos deployed on top of AWS EC2. We begin by presenting our experimental methodology, and discuss the results. \\
 
 \subsection{Methodology}
-To evaluate the intelligent auto scaler put forth by our work, we used the widely used application benchmark \em{RUBiS} an online auction system prototyped after eBay. We used the implementation of the standard PHP incarnation supplemented by a MySQL database. Using \em{Rain} a statistics-based workload generation toolkit, to drive the workload by generating various types of workload patterns, we simulated processes such as auctioning, displaying available items, cataloguing and user authentication. We hosted this application on Apache Stratos in two setups:\\
+To evaluate the intelligent auto-scaler put forth by our work, we used the widely used application benchmark \em{RUBiS} an online auction system prototyped after eBay. We used the implementation of the standard PHP incarnation supplemented by a MySQL database. Using \em{Rain} a statistics-based workload generation toolkit, to drive the workload by generating various types of workload patterns, we simulated processes such as auctioning, displaying available items, cataloguing and user authentication. We hosted this application on Apache Stratos in two setups:\\
 
 \begin{enumerate}
 \item Single DB instance with a single Load Balancer for PHP web application
