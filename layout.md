@@ -21,8 +21,8 @@ figures/z-cost3/z-cost3.png
 .tex
 sectionSimulation_Se.tex
 sectionDesign_We_pro.tex
-sectionExperimental_.tex
 figures/inteliScaler Arch/inteliScaler Arch.png
+sectionExperimental_.tex
 subsection_Evaluation_We_have_implemented__.tex
 1.tex
 sectionAcknowledgeme.tex
