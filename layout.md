@@ -2,6 +2,7 @@ abstract.tex
 maketitle__vspace1in.tex
 sectionIntroduction_.tex
 sectionRelated_Work_.tex
+subsection_Evaluating_the_performance_of__.tex
 sectionDesign_We_pro.tex
 figures/inteliScaler Arch/inteliScaler Arch.png
 subsubsection_Workload_Predictor_This_component__.tex
