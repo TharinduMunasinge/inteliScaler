@@ -27,6 +27,7 @@ subsubsection_Workload_Predictor_This_component__.tex
 sectionExperimental_.tex
 subsection_Evaluation_We_have_implemented__.tex
 subsection_Overall_Evaluation_We_ran__1.tex
+figures/results_workload_3_4/results_workload_3_4.png
 begin_figure_h_centering_includegraphics__.tex
 1.tex
 sectionAcknowledgeme.tex
