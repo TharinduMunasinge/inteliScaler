@@ -1,7 +1,7 @@
 \section{Cost-Aware Resource Allocation}\\
 Most of the public PaaS solutions like Google App Engine provide SLAs based on the QoS provided. According to these SLAs, a penalty will be charged from the provider to the PaaS user in a case where the provider was unable to provide the agreed level of service. In most cases this penalty is defined as a percentage of the monthly cost of users.
 
-We propose a greedy heuristic scaling algorithm inspired by already existing PaaS SLAs. However, unlike most PaaS providers, we do not consider service uptime as the measure of QoS. Instead we consider any performance degradation with respect to the matrix considered (Memory Consumption, CPU Utilization, Requests in Flight) as a violation.
+We propose a greedy heuristic scaling algorithm inspired by already existing PaaS SLAs. However, unlike most PaaS providers, we do not consider service uptime as the measure of QoS, instead we consider any performance degradation with respect to the matrix considered (Memory Consumption, CPU Utilization, Requests in Flight) as a violation.
 
 \subsection{Scaling Algorithm}
 Considering both resource cost and the penalty for performance degradation, we define the total cost in the next T minutes as follows.\\
