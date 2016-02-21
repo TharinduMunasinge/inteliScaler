@@ -28,5 +28,6 @@ figures/results_workload_3_4/results_workload_3_4.png
 begin_table_h_centering_caption__.tex
 figures/results_workload_5/results_workload_5.png
 begin_table_h_centering_caption__1.tex
+section_Future_Work_subsection_Define__.tex
 1.tex
 sectionAcknowledgeme.tex
