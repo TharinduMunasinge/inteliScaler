@@ -24,6 +24,5 @@ figures/z-cost3/z-cost3.png
 .tex
 sectionSimulation_Se.tex
 sectionExperimental_.tex
-section_Future_Improvements_It_is__.tex
 1.tex
 sectionAcknowledgeme.tex
