@@ -19,9 +19,9 @@ figures/z-cost3/z-cost3.png
 .tex
 sectionDesign_We_pro.tex
 figures/inteliScaler Arch/inteliScaler Arch.png
-sectionSimulation_Se.tex
 figures/Copy of Scaling- Flow Chart/Copy of Scaling- Flow Chart.png
 subsubsection_Workload_Predictor_This_component__.tex
+sectionSimulation_Se.tex
 sectionExperimental_.tex
 subsection_Evaluation_We_have_implemented__.tex
 1.tex
