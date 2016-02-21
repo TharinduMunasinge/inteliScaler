@@ -19,8 +19,8 @@ figures/z-proactive1/z-proactive1.png
 Two_graphs_in_the_ref__.tex
 figures/z-cost3/z-cost3.png
 .tex
-figures/inteliScaler Arch/inteliScaler Arch.png
 sectionDesign_We_pro.tex
+figures/inteliScaler Arch/inteliScaler Arch.png
 sectionSimulation_Se.tex
 sectionExperimental_.tex
 subsection_Evaluation_We_have_implemented__.tex
