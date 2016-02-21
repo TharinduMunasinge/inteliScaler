@@ -3,7 +3,7 @@
 We ran several workloads, with drastically different characteristics, on the actual implementation of Apache Stratos and inteliScaler deployed in AWS EC2 setup.
 
 \subsubsection{Workload I}
-First we tested the same workload that was used earlier as shown in table \ref{table:analysis_workload} against inteliScaler. Configurations of the Stratos are same as described in table \ref{table:policy_low_threshold} and table \ref{table:policy_high_threshold}.
+First we tested the same workload that was used earlier as shown in table \ref{table:analysis_workload} against inteliScaler. Configurations of Stratos are given in table \ref{table:policy_threshold}.
 
 \begin{table}[h!]
 \centering
@@ -21,7 +21,7 @@ Transition (seconds) & 30 & 30 & 30 & 30 & 30 & 30 \\ \hline
 \begin{table}[h!]
 \centering
 \caption{Auto Scaling policy of Stratos for different Setup Configurations}
-\label{table:policy_low_threshold}
+\label{table:policy_threshold}
 \begin{tabular}{|c|c|c|c|}
 \hline
 setup & load average & memory consumption & request in flight \\ \hline
