@@ -9,6 +9,7 @@ subsection_Our_Approach_For_adaptive__.tex
 subsection_Proposed_Prediction_Algorithm_begin__.tex
 section_Cost_Aware_Resource_Allocation__.tex
 figures/z-demo/z-demo.png
+figures/demo/demo.png
 subsection_Pricing_Model_Awareness_Our__.tex
 subsectionPrediction.tex
 figures/z-stratos1/z-stratos1.png
