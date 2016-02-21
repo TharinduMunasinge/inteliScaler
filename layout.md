@@ -17,12 +17,12 @@ figures/z-stratos1/z-stratos1.png
 figures/z-reactive2/z-reactive2.png
 figures/z-proactive1/z-proactive1.png
 Two_graphs_in_the_ref__.tex
-figures/inteliScaler Arch/inteliScaler Arch.png
 figures/z-cost3/z-cost3.png
 .tex
 sectionSimulation_Se.tex
 sectionDesign_We_pro.tex
 sectionExperimental_.tex
+figures/inteliScaler Arch/inteliScaler Arch.png
 subsection_Evaluation_We_have_implemented__.tex
 1.tex
 sectionAcknowledgeme.tex
