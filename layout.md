@@ -6,7 +6,6 @@ subsection_Limitations_of_Existing_Approaches__.tex
 subsection_Our_Approach_For_adaptive__.tex
 subsection_Proposed_Prediction_Algorithm_begin__.tex
 section_Cost_Aware_Resource_Allocation__.tex
-figures/z-demo/z-demo.png
 figures/zdemo2/zdemo2.png
 subsection_Pricing_Model_Awareness_Our__.tex
 subsectionPrediction.tex
