@@ -1,0 +1,17 @@
+\begin{table}[h!]
+\centering
+\caption{QoS summary for evaluation of Workload II on AWS EC2}
+\label{table:analysis_qos_workload_5}
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+
+test case & average  response time & requests initiated & requests completed & time out errors \\ \hline
+
+Stratos & 2.7150 s & 178848 & 102671 & 16257\\ \hline
+
+inteliScaler & 1.1207 s & 214041 & 201719 & 6988\\ \hline
+
+\end{tabular}
+\end{table}
+
+As shown in figure \ref{graph:workload_5} inteliScaler has the lowest resource allocation of 10 VMs whereas for the same workload Apache Stratos allocates 15 VMs, saving the cost for 5 VM's. Also the QoS of inteliScaler is better than Stratos as shown in table \ref{table:analysis_qos_workload_5}. inteliScaler has responded to 94.24\% of the requests generated whereas Stratos has responded to only for 57.41\% of the total requests generated. There is a significant time out and drop off error in Stratos compared to inteliScaler, which is the reason for these figures. 
