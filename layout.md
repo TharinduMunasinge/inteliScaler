@@ -19,6 +19,7 @@ figures/z-proactive1/z-proactive1.png
 figures/zproactive/zproactive.png
 Two_graphs_in_the_ref__.tex
 figures/z-cost3/z-cost3.png
+subsubsection_Evaluation_of_Scaling_Algorithm__.tex
 .tex
 sectionDesign_We_pro.tex
 figures/inteliScaler Arch/inteliScaler Arch.png
