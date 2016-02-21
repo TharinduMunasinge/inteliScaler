@@ -23,7 +23,7 @@ figures/inteliScaler Arch/inteliScaler Arch.png
 figures/Copy of Scaling- Flow Chart/Copy of Scaling- Flow Chart.png
 subsubsection_Workload_Predictor_This_component__.tex
 sectionExperimental_.tex
-subsection_Overall_Evaluation_We_ran__1.tex
+subsection_Evaluation_We_ran_several__.tex
 figures/results_workload_3_4/results_workload_3_4.png
 begin_table_h_centering_caption__.tex
 figures/results_workload_5/results_workload_5.png
