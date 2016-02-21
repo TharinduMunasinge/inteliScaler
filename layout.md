@@ -12,6 +12,7 @@ figures/z-demo/z-demo.png
 subsection_Pricing_Model_Awareness_Our__.tex
 subsectionPrediction.tex
 figures/z-stratos1/z-stratos1.png
+figures/zstratos/zstratos.png
 figures/z-reactive2/z-reactive2.png
 figures/z-proactive1/z-proactive1.png
 Two_graphs_in_the_ref__.tex
