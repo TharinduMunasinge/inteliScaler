@@ -1,14 +1,17 @@
-We ran several workloads, with drastically different characteristics, on the actual implementation of Apache Stratos and inteliScaler deployed in AWS EC2 setup as described in \ref{fig:ec2_setup}
+\subsection{Overall Evaluation}
+
+We ran several workloads, with drastically different characteristics, on the actual implementation of Apache Stratos and inteliScaler deployed in AWS EC2 setup.
+
 \subsubsection{Workload I}
 First we tested the same workload that was used earlier as shown in table \ref{table:analysis_workload} against inteliScaler.  Configurations of the Stratos are same as described in table \ref{table:policy_low_threshold} and table \ref{table:policy_high_threshold}.
+
 \begin{figure}[h!]
 \centering
 \captionsetup{justification=centering,margin=1cm}
-\includegraphics[width=500px]{graphs/results_workload_3_4}
+\includegraphics[width=500px]{figures/results_workload_3_4}
 \caption{Performance comparison in AWS EC2 Setup for Workload I}
 \label{graph:workload_3}
 \end{figure}
-
 
 \begin{table}[h!]
 \centering
@@ -49,7 +52,7 @@ Transition (seconds) & 30 & 30 & 30 & 30 & 30 & 30 & 30 & 30 & 30 & 30  \\ \hlin
 \begin{figure}[h!]
 \centering
 \captionsetup{justification=centering,margin=1cm}
-\includegraphics[width=500px]{graphs/results_workload_5}
+\includegraphics[width=500px]{figures/results_workload_5}
 \caption{Performance comparison in AWS EC2 Setup for Workload II}
 \label{graph:workload_5}
 \end{figure}
