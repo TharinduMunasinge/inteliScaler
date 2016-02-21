@@ -4,3 +4,16 @@ We ran several workloads, with drastically different characteristics, on the act
 
 \subsubsection{Workload I}
 First we tested the same workload that was used earlier as shown in table \ref{table:analysis_workload} against inteliScaler.  Configurations of the Stratos are same as described in table \ref{table:policy_low_threshold} and table \ref{table:policy_high_threshold}.
+
+\begin{table}[h!]
+\centering
+\caption{Workload for Performance Analysis}
+\label{table:analysis_workload}
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+Segment & 1 & 2 & 3 & 4 & 5 & 6\\ \hline
+Duration (seconds) & 240 & 240 & 240 & 240 & 240 & 240 \\ \hline
+Users & 400 & 800 & 1600 & 3200 & 800 & 400   \\ \hline
+Transition (seconds) & 30 & 30 & 30 & 30 & 30 & 30 \\ \hline
+\end{tabular}
+\end{table}
