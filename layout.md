@@ -14,6 +14,7 @@ subsectionPrediction.tex
 figures/z-stratos1/z-stratos1.png
 figures/zstratos/zstratos.png
 figures/z-reactive2/z-reactive2.png
+figures/zreactive/zreactive.png
 figures/z-proactive1/z-proactive1.png
 Two_graphs_in_the_ref__.tex
 figures/z-cost3/z-cost3.png
