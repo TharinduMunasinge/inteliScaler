@@ -24,7 +24,6 @@ sectionDesign_We_pro.tex
 figures/inteliScaler Arch/inteliScaler Arch.png
 figures/Copy of Scaling- Flow Chart/Copy of Scaling- Flow Chart.png
 subsubsection_Workload_Predictor_This_component__.tex
-sectionSimulation_Se.tex
 sectionExperimental_.tex
 subsection_Evaluation_We_have_implemented__.tex
 We_ran_several_workloads_with__.tex
