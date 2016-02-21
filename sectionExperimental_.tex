@@ -2,15 +2,29 @@
 Here we evaluate inteliScaler within Apache Stratos deployed on top of AWS EC2. We begin by presenting our experimental methodology, and discuss the results. \\
 
 \subsection{Experimental Setup}
-To evaluate the intelligent auto-scaler put forth by our work, we used the widely used application benchmark \textit{RUBiS}, an online auction system prototyped after eBay. We used the implementation of the standard PHP incarnation supplemented by a MySQL database. Using \textit{Rain}, a statistics-based workload generation toolkit, to drive the workload by generating various types of workload patterns, we simulated processes such as auctioning, displaying available items, cataloguing and user authentication. We hosted this application on Apache Stratos in two setups:\\
+In order to evaluate the scaling process of Apache Stratos we cannot simply use either a simulation or the built-in mock IaaS feature, since they do not capture every aspect of a real system such as fault detection and handling, spawn time delay and in-flight requests count. Hence we deployed Apache Stratos 4.1.4 on AWS EC2 in a distributed setup to run a few workloads using the RUBiS benchmark and allow the system to scale using default policies. Configuration details of the setup are given in table \ref{tab:stratos_config}. 
 
-\begin{enumerate}
-\item Single DB instance with a single Load Balancer for PHP web application
-\item Multiple DB instances and two Load Balancers for PHP web application and MySQL database
-\end{enumerate}
 
-\subsubsection{Case Study I}
-The experiment was run using only a single MySQL instance hosted using AWS RDS Service and the RUBiS web application hosted on top of Apache Stratos Setup deployed in AWS EC2 Services. \\
+\begin{table}[h!]
+\centering
+\caption{Apache Stratos setup configuration}
+\label{tab:stratos_config}
+    \begin{tabular}{ | l | l | l | p{5cm} |}
+    \hline
+    Stratos Component & Implementation & EC2 Instance Type & Details \\ \hline
+    Stratos & Apache Stratos 4.1.4 & t2.medium & This includes Stratos Manager and the Auto-Scaler \\ \hline
+    
+    Message Broker & Apache ActiveMQ 1.8 & t2.medium & Used to communicate between each component and Cartridge Agent on each node \\ \hline
+    
+    Load Balancer & HAProxy 1.6 & t2.medium & One static load balancer to handle application requests \\    \hline
+    
+    Complex Event Processor & WSO2 CEP 3.1 & r3.large & Aggregates all health stats gathered from each node real-time and produces average, gradient, derivative values \\    \hline
+    
+    Database & MySQL & r3.large & Central database for all nodes to read/write \\    \hline
+    
+    Load Generator & Rain Tool Kit & r3.large & Creates multiple connections with the Load Balancer to emulate the stipulated users and their actions \\    \hline
+    \end{tabular}
+    
+\end{table}
 
-\subsubsection{Case Study II}
-In this setup we hosted both web application and the database instance on Apache Stratos Setup deployed in AWS EC2.
+At the time of evaluation, the latest stable version of Apache Stratos was 4.1.4. Apache ActiveMQ was chosen as it is the message broker recommended by Apache Stratos, although other brokers like RabbitMQ are also known to be supported. We tried almost all the options for the load balancer that Apache Stratos supported (according to their documentation), but we could only manage to set up HAProxy as the load balancer with a few modifications on our own. WSO2 CEP was the only choice for the event processor as the implementation is heavily coupled with the architecture of WSO2 CEP. We used a central database and scaled only the PHP instances, avoiding the trouble of syncing databases across multiple nodes which would have been the case if a MySQL was also provisioned on a cluster. For the central database we had two setups, one using AWS RDS and the other with our own dedicated server. Since AWS RDS had certain limitations such as the maximum number of concurrent connections, we set up our own node by tuning its performance to handle up to 5000 concurrent connections. Two extra nodes were set up on the same network to enumerate the workload for the RUBiS app deployed on top of Apache Stratos.
