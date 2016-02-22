@@ -3,6 +3,7 @@ maketitle__vspace1in.tex
 sectionIntroduction_.tex
 sectionRelated_Work_.tex
 sectionDesign_We_pro.tex
+figures/inteliScaler Arch/inteliScaler Arch.png
 section_Prediction_Model_subsection_Requirements__.tex
 subsection_Limitations_of_Existing_Approaches__.tex
 subsection_Our_Approach_For_adaptive__.tex
@@ -19,7 +20,6 @@ Two_graphs_in_Figure_ref__.tex
 figures/z-cost3/z-cost3.png
 subsubsection_Evaluation_of_Scaling_Algorithm__.tex
 It_can_be_observed_from__.tex
-figures/inteliScaler Arch/inteliScaler Arch.png
 sectionExperimental_.tex
 subsection_Evaluation_We_ran_several__.tex
 figures/results_workload_3_4/results_workload_3_4.png
