@@ -1,10 +1,10 @@
 \subsection{Proposed Approach}
 
-For adaptive workload prediction, we propose an error-based ensemble technique that tries to address situations where historical data is initially unavailable, making offline training impossible. As the dataset accumulates over time, the prediction algorithm will adapt its newer forecasts to latest characteristics of the accumulated workload data.
+For adaptive workload prediction, we propose an error-based ensemble technique that tries to address situations where historical data is initially unavailable, making offline training impossible. Ensemble technique uses a mixture of prediction algorithms from time serial analysis and machine leaning. As the dataset accumulates over time, the prediction algorithm will adapt its newer forecasts to latest characteristics of the accumulated workload data.\\
 
 In existing error-based combining techniques, mean values of error metrics (e.g., absolute error, absolute percentage error, squared error, etc.) are taken into account while calculating the contributing factors for individual methods. 
 Treating the currently available dataset as a time series
-$X=[x_{1},x_{2},.. x_{t}]$
+$X=[x_{1},x_{2},.. , x_{t}]$
 we want to calculate predictions for $x_{t+h}$. If the final predicted value is $\hat{x}_{t+h}$ and the predicted value from the $i$-th model of the ensemble set-up for $x_{t+h}$ is $\hat{x}_{t+h}^{(i)}$, the ensemble value $\hat{x}_{t+h}$ can be defined as a weighted sum of predictions from each model:
 \begin{equation}
 \hat{x}_{t+h}= \sum_{i=1}^{k}w_i \hat{x}_{t+h}^{(i)} \ \ \forall k \in \{1,2,3,...,n\}
