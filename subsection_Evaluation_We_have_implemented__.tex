@@ -1,8 +1,6 @@
 \subsection{Evaluation}
 
-We have implemented the proposed prediction algorithm in R and tested it against some publicly available datasets as well as several real-world cloud workloads \cite{AutoscaleAnalyser} collected from server applications. Our solution was compared with each of the constituent models in the ensemble solution, two other popular ensemble techniques (mean and median ensemble), the existing prediction technique in Apache Stratos, and the prediction model described in \cite{Roy_2011}.
-
-Table \ref{prediction_cloud} includes a comparison of prediction approaches against CPU and memory usage traces obtained from a dedicated standalone server from a private cloud, and a summarized portion of the Google cluster dataset \cite{GoogleClusterData} which includes a series of task execution details against their starting and ending times.
+We implemented the proposed prediction algorithm in R and tested it against a several publicly available datasets, as well as several real-world cloud workloads \cite{AutoscaleAnalyser} collected from server applications. Our solution was compared with each of the constituent models in the ensemble solution, two other popular ensemble techniques (mean and median ensemble), the existing prediction technique in Apache Stratos, and the prediction model described in \cite{Roy_2011}. Table \ref{prediction_cloud} shows the comparison of prediction approaches against CPU and memory usage traces obtained from a dedicated standalone server from a private cloud, as well as and a summarized portion of the Google cluster dataset \cite{GoogleClusterData}, which includes a series of task execution details against their starting and ending times. Boldfaced and underlined values in the table denote instances of the best and worst performances observed for each dataset across all methods, respectively. From the results it is clear that our proposed technique provides the best prediction results for several datasets while never performing worse than the individual prediction methods.\\
 
 \begin{table}[]
 \centering
@@ -25,5 +23,3 @@ Median Ensemble                                      &  12.059              & 0.
 Proposed Ensemble                                     & \textbf{11.934}           & \textbf{0.027}            & \textbf{6.972}            & \textbf{0.129}            & 2.873                     & 0.027                     \\ \hline
 \end{tabular}
 \end{table}
-
-Boldfaced and underlined values in Table I denote instances of the best and worst performances observed for each dataset across all methods, respectively. From the results it is clear that our proposed technique provides the best prediction results for several datasets while never performing worse than the individual prediction methods.
