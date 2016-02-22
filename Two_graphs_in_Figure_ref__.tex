@@ -1,6 +1,4 @@
-Two graphs in Figure \ref{stratos} shows the variation of instance count with and without smart killing when the prediction mechanism of Stratos is used, along with an 80\% threshold value to calculate the required number of instances.
-
-Graphs in Figure \ref{reactive} and Figure \ref{proactive} shows possible combinations of reactive and proactive auto-scaling approaches with and without smart killing. An 80\% threshold level is used in reactive solutions as well. In the proactive approach, the proposed heuristic is used with following penalty function:
+Two graphs in Fig. \ref{stratos} shows the variation of VM instance count with and without smart killing when the prediction mechanism of (original) Stratos is used, along with an 80\% threshold value to calculate the required number of instances. Graphs in Fig. \ref{reactive} and \ref{proactive} show possible combinations of reactive and proactive auto-scaling approaches with and without smart killing. An 80\% threshold level is used in reactive solutions as well. In the proactive approach, the proposed heuristic is used with following penalty function:
 
 $$f(x) = \begin{cases} 
 0 & \text{if $0 < x \le 0.05$}; \\
@@ -8,7 +6,4 @@ $$f(x) = \begin{cases}
 0.2 & \text{if $1 < x \le 5$};\\
 2^{\frac{x}{20}} & \text{if $5 < x \le 100$};.\end{cases} $$
 
-
-Figure \ref{cost} shows the variation of cost over time for for different auto-scaling approaches on AWS.It can be noted that blind killing combined with Apache Stratos incur highest cost while proactive solution combined with smart killing.
-
-From the results in resource utilization graphs and cost graphs we observe, introducing smart killing feature for auto-scaling improves resource utilization while reducing the cost.significantly , regardless of the auto-scaling approach (reactive or proactive). We also conclude the proposed proactive scaling approach outperforms the reactive threshold approach, considering QoS as well as resource cost.
+Fig. \ref{cost} shows the variation of cost over time for different auto-scaling approaches on AWS. It can be noted that blind killing combined with Apache Stratos incur the highest cost, while proactive solution combined with smart killing leads to the lowest cost. From the results in resource utilization graphs and cost graphs, it can be observed that by introducing smart killing feature for auto-scaling improves resource utilization while reducing the cost significantly, regardless of the auto-scaling approach (reactive or proactive). It can be concluded that the proposed proactive scaling approach outperforms the reactive threshold approach, considering QoS and resource cost.
