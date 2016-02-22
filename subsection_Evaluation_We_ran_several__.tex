@@ -3,7 +3,9 @@
 We ran several workloads, with drastically different characteristics, on the actual implementation of Apache Stratos and inteliScaler deployed in AWS EC2 setup.
 
 \subsubsection{Workload I}
-First we tested the same workload that was used earlier as shown in Table \ref{table:analysis_workload} against inteliScaler. Configurations of Stratos are given in Table \ref{table:policy_threshold}.
+First we tested the same workload that was used earlier as shown in Table \ref{table:analysis_workload} against inteliScaler. Configurations of Stratos are given in Table \ref{table:policy_threshold}.\\
+
+It is clear that inteliScaler outperforms both the configurations of Stratos as shown in Fig. 7. inteliScaler has allocated less number of VM's to handle the same workload. In terms of QoS, inteliScaler has a success ratio of 91.54\%, which is significantly higher than the 80\% of low threshold configuration and 68\% of high threshold configuration. Number of time out errors is also significantly low where in inteliScaler it is 0.8\%, while low threshold configuration has 0.9\% and high threshold configuration has 4.2\%.\\
 
 \begin{table}[h!]
 \centering
@@ -13,7 +15,7 @@ First we tested the same workload that was used earlier as shown in Table \ref{t
 \hline
 Segment & 1 & 2 & 3 & 4 & 5 & 6\\ \hline
 Duration (seconds) & 240 & 240 & 240 & 240 & 240 & 240 \\ \hline
-Users & 400 & 800 & 1600 & 3200 & 800 & 400   \\ \hline
+Users & 400 & 800 & 1600 & 3200 & 800 & 400 \\ \hline
 Transition (seconds) & 30 & 30 & 30 & 30 & 30 & 30 \\ \hline
 \end{tabular}
 \end{table}
