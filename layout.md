@@ -17,8 +17,8 @@ figures/zstratos/zstratos.png
 figures/zreactive/zreactive.png
 figures/zproactive/zproactive.png
 Two_graphs_in_Fig_ref__.tex
-subsubsection_Evaluation_of_Scaling_Algorithm__.tex
 figures/z-cost3/z-cost3.png
+subsubsection_Evaluation_of_Scaling_Algorithm__.tex
 It_can_be_observed_from__.tex
 sectionExperimental_.tex
 subsection_Evaluation_We_ran_several__.tex
