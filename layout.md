@@ -20,7 +20,6 @@ subsubsection_Evaluation_of_Scaling_Algorithm__.tex
 It_can_be_observed_from__.tex
 sectionDesign_We_pro.tex
 figures/inteliScaler Arch/inteliScaler Arch.png
-subsubsection_Workload_Predictor_This_component__.tex
 sectionExperimental_.tex
 subsection_Evaluation_We_ran_several__.tex
 figures/results_workload_3_4/results_workload_3_4.png
