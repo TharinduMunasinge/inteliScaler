@@ -1,32 +1,31 @@
 \subsection{Proposed Approach}
 
-For adaptive workload prediction, we propose an error-based ensemble technique that tries to address situations where historical data is initially unavailable, making offline training impossible. Ensemble technique uses a mixture of prediction algorithms from time serial analysis and machine leaning. As the dataset accumulates over time, the prediction algorithm will adapt its newer forecasts to latest characteristics of the accumulated workload data.\\
+For adaptive workload prediction, we propose an error-based ensemble technique that tries to address situations where historical data is initially unavailable, making offline training impossible. Ensemble technique uses a mixture of prediction algorithms from time-serial analysis and machine leaning. As the dataset accumulates over time, the prediction algorithm will adapt its newer forecasts to latest characteristics of the accumulated workload data.
 
 In existing error-based combining techniques, mean values of error metrics (e.g., absolute error, absolute percentage error, squared error, etc.) are taken into account while calculating the contributing factors for individual methods. 
 Treating the currently available dataset as a time series
 $X=[x_{1},x_{2},.. , x_{t}]$
 we want to calculate predictions for $x_{t+h}$. If the final predicted value is $\hat{x}_{t+h}$ and the predicted value from the $i$-th model of the ensemble set-up for $x_{t+h}$ is $\hat{x}_{t+h}^{(i)}$, the ensemble value $\hat{x}_{t+h}$ can be defined as a weighted sum of predictions from each model:
 \begin{equation}
-\hat{x}_{t+h}= \sum_{i=1}^{k}w_i \hat{x}_{t+h}^{(i)} \ \ \forall k \in \{1,2,3,...,n\}
+\hat{x}_{t+h}= \sum_{i=1}^{k}w_i \hat{x}_{t+h}^{(i)} \ \ \forall k \in \{1, 2, 3, ..., n\}
 \end{equation}
-
 where the $i$-th forecasting method is assigned a weight $w_i$. Considering that the weights should add up to unity for the sake of unbiasedness \cite{Adhikari_2012}, we define the contribution from the $i$-th model to the final result as $c_i$, so that the above equation becomes:
 \begin{equation}
 \hat{x}_{t+h}= \frac{\sum_{i=1}^{k}c_i \hat{x}_{t+h}^{(i)}}{\sum_{i=1}^{k}c_i}
 \end{equation}
 where $w_{i}= \frac{c_{i}}{\sum_{j=1}^{k}c_j}$.
-To determine the contribution coefficients $c_i$ for our technique, we use past forecast errors of each model. Due to the need for the accurate predictions for the next time horizon, the contributions are calculated using inverses of the past forecasting errors.\\
-Among the popular error quantification techniques, models whose errors are based on the last observation overlook overall accuracy and highlight the error of the last prediction, whereas  average errors assign equal significance to all the last prediction errors. However, our situation requires assigning a larger significance to errors in more recent predictions and smaller significance to earlier predictions. We address this requirement by using exponential smoothing to fit the past forecast errors, and the contribution coefficients $c_{i,t}$ are calculated using the inverses of the the fitted values ($e_{t}$). If $b_{i,t}$ is the fitted value of the past forecasting error from the $i$-th model at $t$-th time interval, $c_{i,t}=\frac{1}{b_{i,t}}$. Where $e_{t}$ can be the absolute error, squared error, or absolute relative error at $t$-th prediction. $b_{i,t}$ can be defined as:
+To determine the contribution coefficients $c_i$ for our technique, we use past forecast errors of each model. Due to the need for the accurate predictions for the next time horizon, the contributions are calculated using inverses of the past forecasting errors.
 
+Among the popular error quantification techniques, models whose errors are based on the last observation overlook overall accuracy and highlight the error of the last prediction, whereas average errors assign equal significance to all the last prediction errors. However, our situation requires assigning a larger significance to errors in more recent predictions and smaller significance to earlier predictions. We address this requirement by using exponential smoothing to fit the past forecast errors, and the contribution coefficients $c_{i,t}$ are calculated using the inverses of the the fitted values ($e_{t}$). If $b_{i,t}$ is the fitted value of the past forecasting error from the $i$-th model at $t$-th time interval, $c_{i,t}=\frac{1}{b_{i,t}}$. Where $e_{t}$ can be the absolute error, squared error, or absolute relative error at $t$-th prediction. $b_{i,t}$ can be defined as:
 \begin{equation} \label{eq:1}
 b_{i,t}= \alpha e_{(i,t)} + (1-\alpha)b_{(i,t-1)}
 \end{equation}
 where $0\leq \alpha \leq 1$
 \begin{equation}\nonumber
-b_{i,t}=\alpha e_{(i,t)} + \alpha(1-\alpha)e_{(i,t-1)}+\alpha(1-\alpha)^2e_{(i,t-2)}+ . ..  
+b_{i,t}=\alpha e_{(i,t)} + \alpha(1-\alpha)e_{(i,t-1)}+\alpha(1-\alpha)^2e_{(i,t-2)}+ . ..
 \end{equation}
 \begin{equation}
 c_{i,t}=\frac{1}{b_{i,t}} 
 \end{equation}
 
-For the proper use of the error-based weighting mechanism described above, it is necessary that the models being ensembled should capture different characteristics of workloads, and hence be collectively capable of covering a wide range of workload characteristics. After careful consideration, we have included an Autoregressive Integrated Moving Average (ARIMA) model which assumes a linear correlation structure among the time series values, a neural network model that can capture complex nonlinear relationships via a data-driven approach, an exponential model for preserving generality and capturing exponential patterns, and a naive forecast model which forecasts the last known data point for the next interval as a sentinel for mitigating situations where insufficiently trained models (especially the early-stage neural network) produce out-of-range forecasts.\\
+For the proper use of the error-based weighting mechanism described above, it is necessary that the models being ensembled should capture different characteristics of workloads, and hence be collectively capable of covering a wide range of workload characteristics. After careful consideration, we have included an Autoregressive Integrated Moving Average (ARIMA) model which assumes a linear correlation structure among the time series values, a neural network model that can capture complex nonlinear relationships via a data-driven approach, an exponential model for preserving generality and capturing exponential patterns, and a naive forecast model which forecasts the last known data point for the next interval as a sentinel for mitigating situations where insufficiently trained models (especially the early-stage neural network) produce out-of-range forecasts. A detailed discussion on selection of these four models is presented in .
