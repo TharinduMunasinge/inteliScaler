@@ -4,10 +4,10 @@ Most of the public PaaS solutions like Google App Engine provide SLAs based on t
 \subsection{Scaling Algorithm}
 Considering both the resource cost and the penalty for performance degradation, we define the total cost in the next T minutes as follows:
 \begin{equation}
-\textbf{$$ C_t(n) = C_{ins}.n + C_{ins} . n . f(\frac{v_i}{T}.100) $$}
+C_t(n) = C_{ins}.n + C_{ins} . n . f(\frac{v_i}{T}.100)
 \end{equation}
 \begin{equation}
-\textbf{$$n_{opt} = argmin_{n \in N \ \land \ n \in [min, max]}C_t(n)$$} 
+n_{opt} = argmin_{n \in N \ \land \ n \in [min, max]}C_t(n)
 \end{equation}
 Here $f$ is a predefined function which calculates penalizing factor based on the percentage of performance degradation. $T$ is the total time for prediction, $C_t(n)$ is the total cost for time T, and $C_{ins}$ is the cost for an VM instance, $n$ is the number of instances, and $v_i$ is the violation time. 
 
