@@ -2,11 +2,13 @@
 Most of the public PaaS solutions like Google App Engine provide SLAs based on the QoS provided. According to these SLAs, a penalty will be charged from the provider to the PaaS user in cases where the provider was unable to provide the agreed level of service. In most cases this penalty is defined as a percentage of the monthly cost of users. We propose a greedy heuristic scaling algorithm inspired by already existing PaaS SLAs. However, unlike most PaaS providers, we do not consider service uptime as the measure of QoS, instead we consider any performance degradation with respect to the metric considered (e.g., memory consumption, CPU utilization, and requests in flight) as a violation.
 
 \subsection{Scaling Algorithm}
-Considering both the resource cost and the penalty for performance degradation, we define the total cost in the next T minutes as follows.
-
+Considering both the resource cost and the penalty for performance degradation, we define the total cost in the next T minutes as follows:
+\begin{equation}
 \textbf{$$ C_t(n) = C_{ins}.n + C_{ins} . n . f(\frac{v_i}{T}.100) $$}
+\end{equation}
+\begin{equation}
 \textbf{$$n_{opt} = argmin_{n \in N \ \land \ n \in [min, max]}C_t(n)$$} 
-
+\end{equation}
 Here $f$ is a predefined function which calculates penalizing factor based on the percentage of performance degradation. $T$ is the total time for prediction, $C_t(n)$ is the total cost for time T, and $C_{ins}$ is the cost for an VM instance, $n$ is the number of instances, and $v_i$ is the violation time. 
-\\
+
 Hypothetical example in Fig. \ref{algo} demonstrate how the proposed algorithm works. Using the above definition, we calculate the total cost for different numbers of instances $n$ iterating through minimum to maximum VM count. Increasing the number of instances increases resource cost, but decreases penalty factor (and therefore the violation cost). Considering values from the minimum number of VMs (shown by the bottommost line in Fig. \ref{algo}) to the maximum number of VMs allowed (shown by the topmost line), we decide on an optimum number that minimizes the total cost. Such an exhaustive search is made possible by the bounded and relatively small range of VM count in most set-ups.
