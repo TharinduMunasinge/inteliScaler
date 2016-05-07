@@ -1,12 +1,12 @@
 \subsection{Proposed Prediction Algorithm}
 The proposed workload prediction algorithm can be defined as follows:
 \begin{enumerate}
-\item Consider the time series history window at time $t$, $X=[x_{1},x_{2},.. x_{t}]$.
-\item Calculate forecast value from the $i$-th time series forecasting method over the time horizon $h$, $\hat{x}_{t+h}^{(i)} \forall i \in \{1,2,3,...,k\}$, where $k$ is the number of forecasting methods used.
+\item Consider the time series history window at time $t$, $X=[x_{1}, x_{2}, ..., x_{t}]$.
+\item Calculate forecast value from the $i$-th time series forecasting method over the time horizon $h$, $\hat{x}_{t+h}^{(i)} \forall i \in \{1, 2, 3, ..., k\}$, where $k$ is the number of forecasting methods used.
 \item Fit a history window for the last $t$ actual data points using the $i$-th method.
 \item Use an exponential smoothing model to fit the errors resulting from Step 3, and use them to calculate the contribution factor for the $i$-th model at $t$, $c_{(i,t)}$.
 \item Calculate the point forecast for time $(t+h)$ using
 $\hat{x}_{t+h}= \frac{\sum_{i=1}^{k}c_{(i,t)} \hat{x}_{t+h}^{(i)}}{\sum_{i=1}^{k}c_{(i,t)}}$.
 \item At time $(t+1)$, actual value for time $(t+1)$ will be available. Add this value to the history window $X=X\cup \{x_{t+1}\}$ and repeat from Step 2.
 \end{enumerate}
-While this algorithm does not specify a particular PaaS workload or performance metric, it can be used with any time-variant metrics such as CPU utilization, memory consumption, and request in flight.\\
+While this algorithm does not specify a particular PaaS workload or performance metric, it can be used with any time-variant metrics such as CPU utilization, memory consumption, and request in flight.
